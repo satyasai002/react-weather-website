@@ -2,6 +2,9 @@ import React from 'react';
 
 import { formatToLocalTime, iconUrlFromCode } from "../weather.js";
 
+import {} from "react-router";
+import { useNavigate } from "react-router-dom";
+
 const Main = ({
   weather: {
     dt,
@@ -17,8 +20,9 @@ const Main = ({
     icon
   },
 }) => {
+  const navigate = useNavigate();
   return (
-    <div className="App text-white m-4 ">
+    <div className="App text-white mx-24 mt-2 ">
       <div className="flex ">
         <div className="flex flex-row flex-auto p-4">
           <div className=" mb-2">
@@ -48,6 +52,22 @@ const Main = ({
               {formatToLocalTime(dt, timezone)}
             </p>
             <p className="text-right text-lg font-light">{details}</p>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-row ml-4">
+        <div className="flex flex-auto">
+          <div className="p-2"></div>
+          <div className="p-2 text">
+            <button onClick={() => navigate("/")}>Temperature</button>
+          </div>
+          <p className="p-2">|</p>
+          <div className="p-2 text">
+            <button onClick={() => navigate("/humidity")}>Humidity</button>
+          </div>
+          <p className="p-2">|</p>
+          <div className="p-2 text">
+            <button onClick={() => navigate("/speed")}>Wind</button>
           </div>
         </div>
       </div>
