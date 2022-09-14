@@ -38,7 +38,7 @@ function NavBar({ setQuery, units, setUnits }) {
             <div className=" lg:flex px-0 space-x-4 mx-0">
               <input
                 value={city}
-                className="text-white bg-gray-800 w-16"
+                className="text-white bg-gray-800 w-16 sm:w-36"
                 onChange={(e) => setCity(e.currentTarget.value)}
               ></input>
               <button
