@@ -53,7 +53,7 @@ const Humidity = (items) => {
         },
       ],
     });
-  }, []);
+  }, [items]);
 
   return (
     <div

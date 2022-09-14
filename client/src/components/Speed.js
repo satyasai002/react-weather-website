@@ -10,14 +10,9 @@ const Speed = ({ items }) => {
           key={index}
           className="flex flex-col items-center justify-center p-10 shadow-lg "
         >
-          <img
-            key={index}
-            src="./imgs/down.svg"
-            className={`rotate-[${item.deg}deg]`}
-          ></img>
-
-          <p className="font-light ">{item.title}</p>
-          <p className="font-medium">{item.speed}</p>
+          <p className="flex font-light  ">{`${item.deg} deg`}</p>
+          <p className="flex font-light ">{`${item.speed} Km/h`}</p>
+          <p className="flex font">{item.title}</p>
         </div>
       ))}
     </div>

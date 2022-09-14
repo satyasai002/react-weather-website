@@ -33,17 +33,19 @@ const config = {
   },
 };
 
-const Hourly = (items) => {
+const Hourly = ({items}) => {
     
-    let temp = [];
-    let time = [];
+    const temp = [];
+    const time = [];
+    console.log(items)
+
     const [chartData, setChartData] = useState({
       datasets: [""],
     });
-    for (const obj of items.items) {
+    items.map(function (obj) {
       time.push(obj.title);
       temp.push(obj.temp);
-    }
+    });
     useEffect(() =>{
         setChartData({
           labels: time,
@@ -60,7 +62,7 @@ const Hourly = (items) => {
         
       
       
-    },[]);
+    },[items]);
     
     
     

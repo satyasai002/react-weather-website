@@ -17,6 +17,7 @@ function NavBar({ setQuery, units, setUnits }) {
             lat,
             lon,
           });
+          setCity("")
         });
       }
     };
@@ -33,30 +34,20 @@ function NavBar({ setQuery, units, setUnits }) {
                 Weather
               </button>
             </div>
-            <div className="hidden md:flex space-x-7">
-              <button
-                to="/myrides"
-                name="/myrides"
-                className="font-semibold hover:font-bold  text-white hover:underline"
-              >
-                Delhi
-              </button>
-              <button
-                to="/newride"
-                className="font-semibold hover:font-bold  text-white hover:underline"
-              >
-                Chennai
-              </button>
-            </div>
+            <div className="hidden md:flex space-x-7"></div>
             <div className="hidden lg:flex px-0 space-x-4 mx-0">
               <input
                 value={city}
                 onChange={(e) => setCity(e.currentTarget.value)}
               ></input>
-              <button onClick={handleSearchClick}>search</button>
               <button
-                to="/login"
-                className="w-6 hover:w-8"
+                className="bg-white rounded-sm p-1"
+                onClick={handleSearchClick}
+              >
+                search
+              </button>
+              <button
+                className="w-6 bg-white rounded-sm p-1 hover:w-8"
                 onClick={findMyLocation}
               >
                 <img src="./imgs/gps.svg" alt="" />
