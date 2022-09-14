@@ -24,7 +24,7 @@ useEffect(() => {
   fetchWeather();
 }, [query, units]);
   return (
-    <div>
+    <div className="">
       {weather && (
         <div>
           <NavBar

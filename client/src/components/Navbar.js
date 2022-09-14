@@ -23,28 +23,29 @@ function NavBar({ setQuery, units, setUnits }) {
     };
   return (
     <div>
-      <body className="bg-Rgba(236,110,76,1)">
+      <body className="bg-black">
         <nav className="relatve container p-2 mx-auto">
           <div className="flex items-center justify-between">
-            <div className="pt-1 text-white w-96">
+            <div className="pt-1 text-white w-1/2">
               <button
                 to="/"
-                className="text-3xl font-semibold hover:cursor-default"
+                className="text-xl md:text-3xl font-semibold hover:cursor-default"
               >
                 Weather
               </button>
             </div>
-            <div className="hidden md:flex space-x-7"></div>
-            <div className="hidden lg:flex px-0 space-x-4 mx-0">
+            <div className=" md:flex space-x-7"></div>
+            <div className=" lg:flex px-0 space-x-4 mx-0">
               <input
                 value={city}
+                className="text-white bg-gray-800 w-16"
                 onChange={(e) => setCity(e.currentTarget.value)}
               ></input>
               <button
                 className="bg-white rounded-sm p-1"
                 onClick={handleSearchClick}
               >
-                search
+                find
               </button>
               <button
                 className="w-6 bg-white rounded-sm p-1 hover:w-8"

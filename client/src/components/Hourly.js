@@ -68,8 +68,7 @@ const Hourly = ({items}) => {
     
     return (
       <div
-        className=" ml-40 py-2"
-        style={{ height: "250px", width: "900px" }}
+        className="sm:ml-4 md:ml-24 w-screen md:w-1/2 h-72  py-2"
       >
         <Chart
           type="line"

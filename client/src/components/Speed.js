@@ -3,7 +3,7 @@ import Cropper from 'react-easy-crop';
 const Speed = ({ items }) => {
   console.log(items[2].deg)
   return (
-    <div className="flex flex-row items-center ml-24  text-white ">
+    <div className="flex flex-row items-center ml-8  text-white w-screen">
       <div className="flex flex-col items-center justify-center "></div>
       {items.map((item, index) => (
         <div

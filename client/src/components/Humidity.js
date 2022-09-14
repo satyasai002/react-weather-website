@@ -57,7 +57,7 @@ const Humidity = (items) => {
 
   return (
     <div
-      className="items-center justify-center ml-40"
+      className="items-center justify-center ml-16"
       style={{ height: "250px", width: "900px" }}
     >
       <Chart
